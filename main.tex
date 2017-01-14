@@ -1,0 +1,76 @@
+\documentclass[a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[francais]{babel}
+
+
+\usepackage[cm]{fullpage}
+
+\usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{stmaryrd}
+\usepackage{dsfont}
+\usepackage{graphicx}
+
+\usepackage{pgf,tikz}
+\usepackage{mathrsfs}
+%\usetikzlibrary{arrows}
+
+\usepackage{title}
+
+
+\newcommand{\shrug}[1][]{%
+\begin{tikzpicture}[baseline,x=0.8\ht\strutbox,y=0.8\ht\strutbox,line width=0.125ex,#1]
+\def\arm{(-2.5,0.95) to (-2,0.95) (-1.9,1) to (-1.5,0) (-1.35,0) to (-0.8,0)};
+\draw \arm;
+\draw[xscale=-1] \arm;
+\def\headpart{(0.6,0) arc[start angle=-40, end angle=40,x radius=0.6,y radius=0.8]};
+\draw \headpart;
+\draw[xscale=-1] \headpart;
+\def\eye{(-0.075,0.15) .. controls (0.02,0) .. (0.075,-0.15)};
+\draw[shift={(-0.3,0.8)}] \eye;
+\draw[shift={(0,0.85)}] \eye;
+% draw mouth
+\draw (-0.1,0.2) to [out=15,in=-100] (0.4,0.95); 
+\end{tikzpicture}}
+
+\newtheorem{definition}{Définition}
+\newtheorem{proposition}{Proposition}
+\newtheorem*{corollaire}{Corollaire}
+\newtheorem*{preuve}{Démonstration}
+\newtheorem*{remarque}{Remarque}
+\newtheorem*{exemple}{Exemple}
+
+\newcommand{\CC}{\mathds{C}}
+\newcommand{\RR}{\mathds{R}}
+\newcommand{\QQ}{\mathds{Q}}
+\newcommand{\ZZ}{\mathds{Z}}
+\newcommand{\NN}{\mathds{N}}
+\newcommand{\indic}{\mathds{1}}
+\newcommand{\PP}{\mathds{P}}
+
+
+\newcommand{\parenthesis}[1]{\left(#1\right)}
+\newcommand{\sqbrackets}[1]{\left[#1\right]}
+\newcommand{\rdbrackets}[1]{\left\{#1\right\}}
+\newcommand{\Ninterval}[1]{\left\llbracket#1\right\rrbracket}
+\newcommand{\ceil}[1]{\left \lceil #1 \right \rceil}
+\newcommand{\abs}[1]{\left | #1 \right |}
+
+
+
+\title{Titre}
+\author{Professeur}
+\semester{S6}
+\titleyear{2017}
+
+\nopageskipaftertitle
+
+\begin{document}
+
+
+  \maketitle
+
+\end{document}

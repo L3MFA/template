@@ -1,0 +1,43 @@
+\ProvidesPackage{title}[28/02/2016]
+
+% 14/01/2017 update
+% -----------------
+%
+% Edits :
+%
+% Changed the way the semester is shown
+%
+% Provided a \titleyear command as a way to 
+% distinguish the year for which the 
+% document was produced instead of using
+% the compilation date
+% [!!] \year command conflicts with the LaTeX default provided one.
+%
+%
+% Use VIM on Linux because it's better.
+
+\newcommand{\semester}[1]{\gdef\@semester{#1}}
+\newcommand{\@semester}{}
+\newcommand{\titleyear}[1]{\gdef\@titleyear{#1}}
+\newcommand{\@titleyear}{}
+\newcommand{\nopageskipaftertitle}{\let\endtitlepage\relax}
+%Needs a better name
+
+\renewcommand{\maketitle}{
+\makeatletter
+\begin{titlepage}
+  \raggedright
+    {\scshape \@author} \hfill Build date : \@date \hfill \@semester\enspace---\enspace\@titleyear
+
+  \vspace{3em}
+  \centering
+    {\LARGE \@title\par}
+
+  \vspace{1em}
+  \hrulefill
+
+  \vspace{2em}
+\end{titlepage}
+\makeatother
+}
+\endinput
